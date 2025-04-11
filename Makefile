@@ -1,6 +1,6 @@
 build: build-heroku-24 build-heroku-22 build-heroku-18 build-heroku-16 build-cedar-14 build-cedar-10
 
-build-heroku-22:
+build-heroku-24:
 	@echo "Building pdftotext in docker for heroku-24..."
 	@docker run -v $(shell pwd):/buildpack --rm -it -e "STACK=heroku-24" heroku/heroku:24-build bash -c 'cd /buildpack; scripts/build_pdftotext /buildpack/bin/pdftotext-heroku-24'
 	@echo ""
